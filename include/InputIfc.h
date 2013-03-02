@@ -3,12 +3,14 @@
 
 #include <string>
 
+class PlayerCommand;
+
 class InputIfc
 {
 public:
 	virtual ~InputIfc() {}
 
-	virtual std::string getPlayerCommand() = 0;
+	virtual PlayerCommand getPlayerCommand() = 0;
 };
 
 

@@ -8,7 +8,7 @@ class PlayerInput : public InputIfc
 public:
 	PlayerInput();
 	~PlayerInput();
-	std::string getPlayerCommand();
+	PlayerCommand getPlayerCommand();
 };
 
 
