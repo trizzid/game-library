@@ -1,16 +1,14 @@
 #ifndef INPUTIFC_H_
 #define INPUTIFC_H_
 
-#include <string>
-
-class PlayerCommand;
+class PlayerCommandIfc;
 
 class InputIfc
 {
 public:
 	virtual ~InputIfc() {}
 
-	virtual PlayerCommand getPlayerCommand() = 0;
+	virtual PlayerCommandIfc* getCommand() = 0;
 };
 
 

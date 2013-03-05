@@ -14,22 +14,11 @@ void Game::start()
 	gameOutput->tellPlayer( "Welcome..\nEnter 'exit' to end the game.\n" );
 	do
 	{
-		PlayerCommand command = playerInput->getPlayerCommand();
-		switch( command.type )
-		{
-			case PlayerCommand::EXIT:
-				isGameOver = true;
-				gameOutput->tellPlayer( "Goodbye." );
-				break;
-			case PlayerCommand::DESCRIBE:
-				gameOutput->tellPlayer( "You are alone in darkness." );
-				break;
-			case PlayerCommand::HELP:
-				gameOutput->tellPlayer( "exit, describe, help" );
-				break;
-			default:
-				gameOutput->tellPlayer( "You cannot do that yet." );
-				break;
-		}
+		PlayerCommandIfc* command = playerInput->getCommand();
+		std::string result = command->action();
+		if( result == "Goodbye." )
+			isGameOver = true;
+		gameOutput->tellPlayer( result );
+		delete command;
 	}while( !isGameOver );
 }

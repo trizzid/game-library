@@ -8,7 +8,7 @@ class PlayerInput : public InputIfc
 public:
 	PlayerInput();
 	~PlayerInput();
-	PlayerCommand getPlayerCommand();
+	PlayerCommandIfc* getCommand();
 };
 
 

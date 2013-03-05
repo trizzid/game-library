@@ -10,18 +10,20 @@ PlayerInput::~PlayerInput()
 {
 }
 
-PlayerCommand PlayerInput::getPlayerCommand()
+PlayerCommandIfc* PlayerInput::getCommand()
 {
 	std::string s;
 	std::cin >> s;
 
-	PlayerCommand command;
+	PlayerCommand* command;
 	if(s == "exit" )
-		command.type = PlayerCommand::EXIT;
+		command = new PlayerCommand( PlayerCommandIfc::EXIT );
 	else if( s == "describe" )
-		command.type = PlayerCommand::DESCRIBE;
+		command = new PlayerCommand( PlayerCommandIfc::DESCRIBE );
 	else if ( s == "help" )
-		command.type = PlayerCommand::HELP;
+		command = new PlayerCommand( PlayerCommandIfc::HELP );
+	else
+		command = new PlayerCommand( PlayerCommandIfc::UNKNOWN );
 
 	return command;
 }

@@ -8,13 +8,17 @@
 #ifndef PLAYERCOMMAND_H_
 #define PLAYERCOMMAND_H_
 
-class PlayerCommand
+#include "PlayerCommandIfc.h"
+
+class PlayerCommand : public PlayerCommandIfc
 {
 public:
-	enum eType { HELP = 0, DESCRIBE, EXIT, UNKNOWN };
-
-	PlayerCommand();
+	PlayerCommand( const eType& type );
 	virtual ~PlayerCommand();
+
+	std::string action();
+
+private:
 	eType type;
 };
 
