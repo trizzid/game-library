@@ -2,13 +2,18 @@
 #define EXITCOMMAND_H_
 
 #include "PlayerCommandIfc.h"
+#include "OutputIfc.h"
 
 class ExitCommand : public PlayerCommandIfc
 {
 public:
 	ExitCommand(){}
 	virtual ~ExitCommand(){}
-	std::string action(){ return "Goodbye."; }
+	void action( OutputIfc* out )
+	{
+		out->tellPlayer( "Goodbye." );
+	}
+	virtual bool isGameOver() { return true; }
 };
 
 

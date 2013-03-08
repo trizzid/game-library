@@ -2,14 +2,17 @@
 #define PLAYERCOMMAND_H_
 
 #include "PlayerCommandIfc.h"
+#include "OutputIfc.h"
 
 class NullCommand : public PlayerCommandIfc
 {
 public:
 	NullCommand(){}
 	virtual ~NullCommand(){}
-
-	std::string action() { return "You cannot do that yet."; }
+	void action( OutputIfc* out )
+	{
+		out->tellPlayer( "You cannot do that yet." );
+	}
 };
 
 

@@ -2,13 +2,17 @@
 #define HELPCOMMAND_H_
 
 #include "PlayerCommandIfc.h"
+#include "OutputIfc.h"
 
 class HelpCommand : public PlayerCommandIfc
 {
 public:
 	HelpCommand(){}
 	virtual ~HelpCommand(){}
-	std::string action(){ return "exit, describe, help"; }
+	void action( OutputIfc* out )
+	{
+		out->tellPlayer( "exit, describe, help" );
+	}
 };
 
 

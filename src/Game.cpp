@@ -18,11 +18,9 @@ void Game::start()
 	{
 		std::string input = playerInput->getInput();
 		PlayerCommandIfc* command = commandFactory->getCommand( input );
-
-		std::string result = command->action();
-		if( result == "Goodbye." )
+		command->action( gameOutput );
+		if( command->isGameOver() )
 			isGameOver = true;
-		gameOutput->tellPlayer( result );
 		delete command;
 	}while( !isGameOver );
 }

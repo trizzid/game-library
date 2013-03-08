@@ -2,14 +2,17 @@
 #define DESCRIBECOMMAND_H_
 
 #include "PlayerCommandIfc.h"
+#include "OutputIfc.h"
 
 class DescribeCommand : public PlayerCommandIfc
 {
 public:
 	DescribeCommand(){}
 	virtual ~DescribeCommand(){}
-
-	std::string action(){ return "You are alone in darkness."; }
+	void action( OutputIfc* out )
+	{
+		out->tellPlayer( "You are alone in darkness." );
+	}
 };
 
 

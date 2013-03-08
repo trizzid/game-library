@@ -1,22 +1,15 @@
-/*
- * PlayerCommandIfc.h
- *
- *  Created on: 5 Mar 2013
- *      Author: trizzid
- */
-
 #ifndef PLAYERCOMMANDIFC_H_
 #define PLAYERCOMMANDIFC_H_
 
 #include <string>
+class OutputIfc;
 
 class PlayerCommandIfc
 {
 public:
-	enum eType { HELP = 0, DESCRIBE, EXIT, UNKNOWN };
-
 	virtual ~PlayerCommandIfc() {}
-	virtual std::string action() = 0;
+	virtual void action( OutputIfc* ) = 0;
+	virtual bool isGameOver() { return false; }
 };
 
 
