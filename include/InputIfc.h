@@ -1,14 +1,13 @@
 #ifndef INPUTIFC_H_
 #define INPUTIFC_H_
 
-class PlayerCommandIfc;
+#include <string>
 
 class InputIfc
 {
 public:
 	virtual ~InputIfc() {}
-
-	virtual PlayerCommandIfc* getCommand() = 0;
+	virtual std::string getInput() = 0;
 };
 
 

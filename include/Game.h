@@ -6,17 +6,19 @@
 
 class InputIfc;
 class OutputIfc;
+class CommandFactoryIfc;
 
 class Game : public GameIfc
 {
 public:
-	Game( InputIfc*, OutputIfc* );
+	Game( InputIfc*, OutputIfc*, CommandFactoryIfc* );
 	virtual ~Game();
 	void start();
 
 	bool isGameOver;
 	InputIfc* playerInput;
 	OutputIfc* gameOutput;
+	CommandFactoryIfc* commandFactory;
 };
 
 
