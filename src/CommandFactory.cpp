@@ -1,5 +1,8 @@
 #include "../include/CommandFactory.h"
-#include "../include/PlayerCommand.h"
+#include "../include/ExitCommand.h"
+#include "../include/DescribeCommand.h"
+#include "../include/HelpCommand.h"
+#include "../include/NullCommand.h"
 
 CommandFactory::CommandFactory(){}
 CommandFactory::~CommandFactory(){}
@@ -7,11 +10,11 @@ CommandFactory::~CommandFactory(){}
 PlayerCommandIfc* CommandFactory::getCommand( const std::string& s )
 {
 	if(s == "exit" )
-		return new PlayerCommand( PlayerCommandIfc::EXIT );
+		return new ExitCommand;
 	else if( s == "describe" )
-		return new PlayerCommand( PlayerCommandIfc::DESCRIBE );
+		return new DescribeCommand;
 	else if ( s == "help" )
-		return new PlayerCommand( PlayerCommandIfc::HELP );
+		return new HelpCommand;
 
-	return new PlayerCommand( PlayerCommandIfc::UNKNOWN );
+	return new NullCommand;
 }

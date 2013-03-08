@@ -1,8 +1,8 @@
 #include "../include/Game.h"
 #include "../include/InputIfc.h"
 #include "../include/OutputIfc.h"
-#include "../include/PlayerCommand.h"
 #include "../include/CommandFactoryIfc.h"
+#include "../include/PlayerCommandIfc.h"
 
 Game::Game( InputIfc* i, OutputIfc* o, CommandFactoryIfc* c ) :
 	isGameOver( false ), playerInput( i ), gameOutput( o ), commandFactory( c )
