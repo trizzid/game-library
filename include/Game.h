@@ -7,11 +7,12 @@
 class InputIfc;
 class OutputIfc;
 class CommandFactoryIfc;
+class ModelIfc;
 
 class Game : public GameIfc
 {
 public:
-	Game( InputIfc*, OutputIfc*, CommandFactoryIfc* );
+	Game( InputIfc*, OutputIfc*, CommandFactoryIfc*, ModelIfc* );
 	virtual ~Game();
 	void start();
 
@@ -19,6 +20,7 @@ public:
 	InputIfc* playerInput;
 	OutputIfc* gameOutput;
 	CommandFactoryIfc* commandFactory;
+	ModelIfc* model;
 };
 
 

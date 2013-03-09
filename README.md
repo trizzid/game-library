@@ -1,7 +1,6 @@
 game-library
 ============
 
-* group commands in a container
 * add shortcut perfix to command ([0]-Help, [1]-Describe)
 * display output in own window
 * clear window before outputting new text
