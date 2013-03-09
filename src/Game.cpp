@@ -21,6 +21,6 @@ void Game::start()
 		command->action( gameOutput );
 		if( command->isGameOver() )
 			isGameOver = true;
-		delete command;
+		commandFactory->destroyCommand( command );
 	}while( !isGameOver );
 }

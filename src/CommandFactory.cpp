@@ -18,3 +18,8 @@ PlayerCommandIfc* CommandFactory::getCommand( const std::string& s )
 
 	return new NullCommand;
 }
+
+void CommandFactory::destroyCommand( PlayerCommandIfc* c )
+{
+	delete c;
+}

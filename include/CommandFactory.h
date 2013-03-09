@@ -10,6 +10,7 @@ public:
 	CommandFactory();
 	virtual ~CommandFactory();
 	PlayerCommandIfc* getCommand( const std::string& s );
+	void destroyCommand( PlayerCommandIfc* c );
 };
 
 #endif /* COMMANDFACTORY_H_ */
