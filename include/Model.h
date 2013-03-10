@@ -12,6 +12,9 @@ public:
 	std::string getExitMsg();
 	std::string getHelpMsg();
 	std::string getShowMsg();
+
+private:
+	int state;
 };
 
 

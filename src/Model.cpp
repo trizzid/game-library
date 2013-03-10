@@ -1,6 +1,6 @@
 #include "Model.h"
 
-Model::Model(){}
+Model::Model() : state( 0 ) {}
 
 Model::~Model(){}
 
@@ -21,5 +21,12 @@ std::string Model::getHelpMsg()
 
 std::string Model::getShowMsg()
 {
-	return "You are alone in darkness.";
+	std::string s;
+	if ( state == 0 )
+		s = "You are alone in darkness.";
+	else
+		s = "You are still alone and it's still dark.";
+
+	state++;
+	return s;
 }
