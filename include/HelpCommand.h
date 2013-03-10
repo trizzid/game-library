@@ -1,18 +1,14 @@
 #ifndef HELPCOMMAND_H_
 #define HELPCOMMAND_H_
 
-#include "PlayerCommandIfc.h"
-#include "OutputIfc.h"
+#include "Command.h"
 
-class HelpCommand : public PlayerCommandIfc
+class HelpCommand : public Command
 {
 public:
-	HelpCommand(){}
-	virtual ~HelpCommand(){}
-	void action( OutputIfc* out )
-	{
-		out->tellPlayer( "exit, describe, help" );
-	}
+	HelpCommand();
+	virtual ~HelpCommand();
+	void action( OutputIfc* out );
 };
 
 

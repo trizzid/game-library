@@ -2,15 +2,15 @@
 #define COMMANDFACTORYIFC_H_
 
 #include <string>
-class PlayerCommandIfc;
+class CommandIfc;
 
 class CommandFactoryIfc
 {
 public:
 	virtual ~CommandFactoryIfc(){}
 
-	virtual PlayerCommandIfc* getCommand( const std::string& s ) = 0;
-	virtual void destroyCommand( PlayerCommandIfc* c ) = 0;
+	virtual CommandIfc* getCommand( const std::string& s ) = 0;
+	virtual void destroyCommand( CommandIfc* c ) = 0;
 };
 
 

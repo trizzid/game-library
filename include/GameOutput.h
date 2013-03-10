@@ -1,10 +1,3 @@
-/*
- * GameOutput.h
- *
- *  Created on: 28 Feb 2013
- *      Author: trizzid
- */
-
 #ifndef GAMEOUTPUT_H_
 #define GAMEOUTPUT_H_
 

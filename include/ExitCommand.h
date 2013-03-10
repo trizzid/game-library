@@ -1,19 +1,15 @@
 #ifndef EXITCOMMAND_H_
 #define EXITCOMMAND_H_
 
-#include "PlayerCommandIfc.h"
-#include "OutputIfc.h"
+#include "Command.h"
 
-class ExitCommand : public PlayerCommandIfc
+class ExitCommand : public Command
 {
 public:
-	ExitCommand(){}
-	virtual ~ExitCommand(){}
-	void action( OutputIfc* out )
-	{
-		out->tellPlayer( "Goodbye." );
-	}
-	virtual bool isGameOver() { return true; }
+	ExitCommand();
+	virtual ~ExitCommand();
+	void action( OutputIfc* out );
+	bool isGameOver() const;
 };
 
 

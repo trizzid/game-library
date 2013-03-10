@@ -1,10 +1,3 @@
-/*
- * OutputIfc.h
- *
- *  Created on: 28 Feb 2013
- *      Author: trizzid
- */
-
 #ifndef OUTPUTIFC_H_
 #define OUTPUTIFC_H_
 

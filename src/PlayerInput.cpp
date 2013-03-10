@@ -1,4 +1,4 @@
-#include "../include/PlayerInput.h"
+#include "PlayerInput.h"
 #include <iostream>
 
 PlayerInput::PlayerInput()
