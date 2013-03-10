@@ -8,7 +8,7 @@ class ExitCommand : public Command
 public:
 	ExitCommand();
 	virtual ~ExitCommand();
-	void action( OutputIfc* out );
+	void action( OutputIfc* out, ModelIfc* model );
 	bool isGameOver() const;
 };
 

@@ -19,7 +19,7 @@ void Game::start()
 	{
 		std::string input = playerInput->getInput();
 		CommandIfc* command = commandFactory->getCommand( input );
-		command->action( gameOutput );
+		command->action( gameOutput, model );
 		if( command->isGameOver() )
 			isGameOver = true;
 		commandFactory->destroyCommand( command );

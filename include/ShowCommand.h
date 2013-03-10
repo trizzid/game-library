@@ -8,7 +8,7 @@ class ShowCommand : public Command
 public:
 	ShowCommand();
 	virtual ~ShowCommand();
-	void action( OutputIfc* out );
+	void action( OutputIfc* out, ModelIfc* model );
 };
 
 

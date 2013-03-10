@@ -8,7 +8,7 @@ class HelpCommand : public Command
 public:
 	HelpCommand();
 	virtual ~HelpCommand();
-	void action( OutputIfc* out );
+	void action( OutputIfc* out, ModelIfc* model );
 };
 
 

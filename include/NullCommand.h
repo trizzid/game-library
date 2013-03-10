@@ -8,7 +8,7 @@ class NullCommand : public Command
 public:
 	NullCommand();
 	virtual ~NullCommand();
-	void action( OutputIfc* out );
+	void action( OutputIfc* out, ModelIfc* model );
 };
 
 

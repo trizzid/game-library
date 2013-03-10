@@ -6,9 +6,12 @@
 class Model : public ModelIfc
 {
 public:
-	Model(){}
-	~Model(){}
-	std::string getWelcomeMsg(){ return "Welcome..\nEnter 'exit' to end the game.\n"; }
+	Model();
+	~Model();
+	std::string getWelcomeMsg();
+	std::string getExitMsg();
+	std::string getHelpMsg();
+	std::string getShowMsg();
 };
 
 

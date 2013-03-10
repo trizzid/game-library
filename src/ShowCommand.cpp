@@ -1,10 +1,11 @@
 #include "ShowCommand.h"
 #include "OutputIfc.h"
+#include "ModelIfc.h"
 
 ShowCommand::ShowCommand() : Command( CommandIfc::SHOW ) {}
 ShowCommand::~ShowCommand(){}
 
-void ShowCommand::action( OutputIfc* out )
+void ShowCommand::action( OutputIfc* out, ModelIfc* model )
 {
-	out->tellPlayer( "You are alone in darkness." );
+	out->tellPlayer( model->getShowMsg() );
 }
